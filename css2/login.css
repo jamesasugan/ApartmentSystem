@@ -1,0 +1,13 @@
+body {
+  background-color: bisque;
+}
+.logo {
+  width: 150px;
+  height: auto;
+}
+.logo-text {
+  font-size: 30px;
+}
+.custom-w {
+  width: 80%;
+}

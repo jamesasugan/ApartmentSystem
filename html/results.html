@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css2/results.css" />
+    <script
+      src="https://kit.fontawesome.com/470d815d8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="homepage">
+      <div id="background-container"></div>
+      <div id="homeLand">
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <label class="logo"><img src="../pics/flatos.png" /></label>
+          <ul>
+            <li><a class="active" href="#recommended">Rent</a></li>
+            <li><a href="#">Manage</a></li>
+            <li><a href="#footer">About Us</a></li>
+            <li><a class="mid" href="#">List your Property</a></li>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Sign up</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Modal -->
+      <form id="myForm">
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Filter Options</h4>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="propertyType" class="form-label"
+                    >Property Type</label
+                  >
+                  <select
+                    class="form-select"
+                    id="propertyType"
+                    name="propertyType"
+                  >
+                    <option value="any">Any</option>
+                    <option value="studio">Studio Type</option>
+                    <option value="othertypes1">Other Type 1</option>
+                    <option value="othertypes2">Other Type 2</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="location" class="form-label">Location:</label>
+                  <select
+                    class="form-select"
+                    id="location"
+                    aria-label="Location"
+                    name="location"
+                  >
+                    <option value="any">Any</option>
+                    <option value="Carmona">Carmona</option>
+                    <option value="Binan">Binan</option>
+                    <option value="sta.rosa">Sta. Rosa</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price Range:</label>
+                  <input
+                    type="range"
+                    class="form-range"
+                    id="price"
+                    min="500"
+                    max="6500"
+                    step="500"
+                    value="500"
+                    name="price"
+                    aria-label="Price Range"
+                    oninput="updatePriceLabel(this.value)"
+                  />
+                  <div class="price-labels">
+                    <span>&#8369;1000</span>
+                    <span>&#8369;2000</span>
+                    <span>&#8369;3000</span>
+                    <span>&#8369;4000</span>
+                    <span>&#8369;5000</span>
+                    <span>&#8369;6000+</span>
+                  </div>
+                  <div id="selected-price">&#8369;500</div>
+                </div>
+                <div class="mb-3">
+                  <label for="bedrooms" class="form-label">Bedrooms:</label>
+                  <select
+                    class="form-select"
+                    id="bedrooms"
+                    aria-label="Bedrooms"
+                    name="bedrooms"
+                  >
+                    <option value="any">Any</option>
+                    <option value="Two">Two</option>
+                    <option value="Three">Three</option>
+                    <option value="Four">Four</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="searchButton" id="searchContainer">
+          <button
+            type="button"
+            id="buttonMdl"
+            class="btn btn-primary button-mdl"
+            data-bs-toggle="modal"
+            data-bs-target="#filterModal"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            <i class="fa-solid fa-house-chimney"></i>
+            <i class="fa-solid fa-grip"></i>
+          </button>
+          <input
+            class="search-place"
+            type="text"
+            name="search"
+            placeholder="Search"
+          />
+          <input
+            class="search-btn btn btn-primary"
+            type="submit"
+            class="btn btn-primary"
+            value="Submit"
+          />
+        </div>
+      </form>
+      <div class="scrollable-box">
+        <!-- Example Content -->
+        <div class="box-content">
+          <div class="box-image">
+            <img src="../pics/apartment.jpg" alt="Apartment Image" />
+          </div>
+          <div class="box-details">
+            <h3>Apartment for Rent</h3>
+            <p class="location">
+              <i class="fa-solid fa-location-dot"></i> Binan Laguna
+            </p>
+            <p class="description">
+              LOCATED AT CELINA MANSIONS SUBDIVISION BRGY. LOMA, WALKING
+              DISTANCE TO LAGUNA TECHNOPARK GATE 4 AND ENTREGO
+            </p>
+            <div class="price">
+              <p>&#8369;1,500</p>
+              <div class="icons">
+                <div class="icon">
+                  <i class="fas fa-bed"></i>
+                  <span class="text">2</span>
+                  <span class="label">Bedroom/s</span>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-bath"></i>
+                  <span class="text">1</span>
+                  <span class="label">Bathroom/s</span>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-expand"></i>
+                  <span class="text">120m</span>
+                  <span class="label">Floor Area</span>
+                </div>
+              </div>
+            </div>
+            <div class="links">
+              <div class="link-item">
+                <a href="#">View</a>
+              </div>
+              <div class="link-item">
+                <a href="#">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ... (copy paste box-content para matry mo scrollable) ... -->
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var check = document.getElementById("check");
+        var homeLand = document.getElementById("searchContainer");
+        var filterButton = document.getElementById("buttonMdl");
+        var searchText = document.getElementById("searchText");
+        var navLinks = document.querySelectorAll("nav ul li a");
+
+        check.addEventListener("change", function () {
+          var isVisible = !check.checked;
+
+          searchContainer.style.display = isVisible ? "block" : "none";
+          logomid.style.display = isVisible ? "block" : "none";
+          filterButton.style.display = isVisible ? "block" : "none";
+          searchText.style.display = isVisible ? "block" : "none";
+
+          navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              check.checked = false;
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      function updatePriceLabel(value) {
+        const priceLabel = document.getElementById("selected-price");
+        priceLabel.textContent = `Selected Price: ${value}`;
+      }
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

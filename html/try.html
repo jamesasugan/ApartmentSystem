@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .input-group {
+        width: 100%;
+      }
+
+      .form-select {
+        width: 100%;
+      }
+
+      .row g-3 {
+        margin-top: 1rem;
+      }
+
+      /* Modal styles can be adapted based on your design preferences */
+    </style>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <div class="input-group mb-3">
+        <input
+          type="search"
+          class="form-control"
+          placeholder="Search for properties..."
+          aria-label="Search"
+          name="q"
+        />
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+        <button
+          type="button"
+          class="btn btn-link"
+          data-bs-toggle="modal"
+          data-bs-target="#filterModal"
+        >
+          Filters
+        </button>
+      </div>
+
+      <div
+        class="modal fade"
+        id="filterModal"
+        tabindex="-1"
+        aria-labelledby="filterModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="filterModalLabel">
+                Property Filters
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="row g-3 mb-3">
+                <div class="col-sm-6">
+                  <label for="propertyType" class="form-label"
+                    >Property Type:</label
+                  >
+                  <select
+                    class="form-select"
+                    id="propertyType"
+                    name="propertyType"
+                  >
+                    <option value="any">Any</option>
+                    <option value="studio">Studio Type</option>
+                    <option value="othertypes1">Other Type 1</option>
+                    <option value="othertypes2">Other Type 2</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label for="location" class="form-label">Location:</label>
+                  <select class="form-select" id="location" name="location">
+                    <option value="any">Any</option>
+                    <option value="Carmona">Carmona</option>
+                    <option value="Binan">Binan</option>
+                    <option value="sta.rosa">Sta. Rosa</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label for="price" class="form-label">Price:</label>
+                  <select class="form-select" id="price" name="price">
+                    <option value="any">Any</option>
+                    <option value="1500">1500</option>
+                    <option value="2000">2000</option>
+                    <option value="5000">5000</option>
+                  </select>
+                </div>
+                <div class="col-sm-6">
+                  <label for="bedrooms" class="form-label">Bedrooms:</label>
+                  <select class="form-select" id="bedrooms" name="bedrooms">
+                    <option value="any">Any</option>
+                    <option value="Two">Two</option>
+                    <option value="Three">Three</option>
+                    <option value="Four">Four</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Apply Filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

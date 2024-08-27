@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Account Settings</title>
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css2/tenantprofile.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/470d815d8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="py-5 my-5">
+      <div class="container">
+        <img class="logo mb-5" src="../pics/flatos.png" />
+        <div class="bg-white shadow rounded-lg d-block d-sm-flex">
+          <div class="profile-tab-nav border-right side-profile">
+            <div class="p-4">
+              <span class="user-icon"><i class="fa-solid fa-user"></i></span>
+              <h4 class="text-center" id="user_name">Rio Carl De la Cruz</h4>
+            </div>
+            <div
+              class="nav flex-column nav-pills"
+              id="v-pills-tab"
+              role="tablist"
+              aria-orientation="vertical"
+            >
+              <a
+                class="nav-link active"
+                id="account-tab"
+                data-toggle="pill"
+                href="#account"
+                role="tab"
+                aria-controls="account"
+                aria-selected="true"
+              >
+                Account Information
+              </a>
+              <a
+                class="nav-link"
+                id="statement-tab"
+                data-toggle="pill"
+                href="#statement"
+                role="tab"
+                aria-controls="statement"
+                aria-selected="false"
+              >
+                Payment and History
+              </a>
+              <a
+                class="nav-link"
+                id="contact-tab"
+                data-toggle="pill"
+                href="#contact"
+                role="tab"
+                aria-controls="contact"
+                aria-selected="false"
+              >
+                Terms and Conditions
+              </a>
+              <a
+                class="nav-link"
+                id="complaint-tab"
+                data-toggle="pill"
+                href="#complaint"
+                role="tab"
+                aria-controls="complaint"
+                aria-selected="false"
+              >
+                File a Complaint
+              </a>
+              <a
+                class="nav-link"
+                id="rating-tab"
+                data-toggle="pill"
+                href="#rating"
+                role="tab"
+                aria-controls="rating"
+                aria-selected="false"
+              >
+                Share your experience
+              </a>
+            </div>
+          </div>
+          <div class="tab-content p-4 p-md-5" id="v-pills-tabContent">
+            <!--account information-->
+            <div
+              class="tab-pane fade show active"
+              id="account"
+              role="tabpanel"
+              aria-labelledby="account-tab"
+            >
+              <h3 class="mb-4 tab-titles">Account Information</h3>
+              <div class="row account-content">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="Rio Carl"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="De la Cruz"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="cc.riocarl.delacruz@cvsu.edu.ph"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Phone number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="09123456789"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Household number</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="3"
+                      disabled
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Unit</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      value="A"
+                      disabled
+                    />
+                  </div>
+                </div>
+              </div>
+              <div>
+                <a href="#"
+                  >Contact your landlord to update account information</a
+                >
+              </div>
+            </div>
+            <!--account information end-->
+
+            <!--Payment and History-->
+            <div
+              class="tab-pane fade"
+              id="statement"
+              role="tabpanel"
+              aria-labelledby="statement-tab"
+            >
+              <h3 class="mb-4 tab-titles">Payment and History</h3>
+              <div class="history-module">
+                <div class="history-info">
+                  <table>
+                    <thead class="history-head">
+                      <tr>
+                        <th>Due Date</th>
+                        <th>Amount Due</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody class="history-body">
+                      <tr>
+                        <td>January 10, 2024</td>
+                        <td>&#8369;3500</td>
+                        <td style="color: green; font-weight: bold">Paid</td>
+                        <!-- palitan mo color naka inline lang to -->
+                      </tr>
+                      <tr>
+                        <td>January 20, 2024</td>
+                        <td>&#8369;5000</td>
+                        <td style="color: red; font-weight: bold">Unpaid</td>
+                        <!-- palitan mo color naka inline lang to -->
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div>
+                <p class="soa-text">
+                  Something wrong? File a complaint
+                  <a
+                    data-toggle="pill"
+                    href="#complaint"
+                    role="tab"
+                    aria-controls="complaint"
+                    aria-selected="false"
+                    >here</a
+                  >
+                </p>
+              </div>
+            </div>
+            <!--statement of account end-->
+
+            <!--terms and condition-->
+            <div
+              class="tab-pane fade"
+              id="contact"
+              role="tabpanel"
+              aria-labelledby="contact-tab"
+            >
+              <h3 class="mb-4 tab-titles">Contact</h3>
+              <div class="terms-and-conditions">
+                <div class="terms-content">
+                  <div class="terms-mid">
+                    <h1>Rental Agreement Form</h1>
+                    <p>
+                      This agreement is made as of this by and between: <br />
+                      <span class="owner-name">[name]</span> and
+                      <span class="tenant-name">[name]</span>
+                    </p>
+                  </div>
+                  <p class="terms-content">
+                    Starting <span class="date">[date]</span> at
+                    <span class="address">[address]</span> . Both the tenant and
+                    the owner will be bound by a contract that is based on the
+                    terms and conditions stated in the rental agreement form and
+                    is expected to be followed by both parties.
+                  </p>
+                  <div class="terms-bt">
+                    <h4>LEASE/RENTAL RATE</h4>
+                    <p>
+                      The Monthly rental rate for the leased premises shall be
+                      in
+                      <span class="price">[price]</span> and the tenant must pay
+                      the landlord before or on the
+                      <span class="deadline-date">[date]</span> of every month.
+                    </p>
+                  </div>
+                </div>
+                <div class="print-check">
+                  <button class="print-btn mt-2 mb-1" onclick="printTerms()">
+                    <i class="fa-solid fa-print"></i><br />Print
+                  </button>
+                  <p>
+                    Checking the boxes means you and the landlord have agreed to
+                    the terms and conditions. For more questions, contact your
+                    landlord.
+                  </p>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="agreeCheckbox"
+                  />
+                  <label class="form-check-label" for="agreeCheckbox">
+                    By checking this box, I acknowledge that I understand and
+                    accept the responsibilities, rules, and regulations stated
+                    in the agreement, and I am bound by its terms throughout the
+                    duration of the rental period
+                  </label>
+                </div>
+                <div class="text-center terms-button">
+                  <button class="btn btn-primary mt-3 check-label">
+                    I have read the terms and conditions
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--terms and condition end-->
+
+            <!-- file a complaint -->
+            <div
+              class="tab-pane fade"
+              id="complaint"
+              role="tabpanel"
+              aria-labelledby="complaint-tab"
+            >
+              <h3 class="mb-4 tab-titles">File a Complaint</h3>
+
+              <form id="complaintForm" action="/backend/endpoint" method="POST">
+                <div class="row file-content">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <h2>Write a Message</h2>
+                      <label for="complaintSubject">Subject:</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="complaintSubject"
+                        name="complaintSubject"
+                        placeholder="Enter subject"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <label for="complaintText">Message:</label>
+                      <textarea
+                        class="form-control"
+                        id="complaintText"
+                        name="complaintText"
+                        rows="5"
+                        placeholder="Enter your complaint"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="file-button">
+                  <input
+                    type="submit"
+                    class="btn btn-primary mt-2"
+                    value="Send Message"
+                  />
+                </div>
+              </form>
+            </div>
+            <!-- rating -->
+            <div
+              class="tab-pane fade"
+              id="rating"
+              role="tabpanel"
+              aria-labelledby="rating-tab"
+            >
+              <h3 class="mb-4 tab-titles">Rate</h3>
+
+              <form id="ratingForm" class="ratingform" method="get" action="#">
+                <div class="rating-category">
+                  <label class="rate-title" for="environmentRating"
+                    >Environment:</label
+                  >
+                  <div class="rate" id="environmentRating">
+                    <input
+                      type="radio"
+                      id="environmentStar5"
+                      name="environment"
+                      value="5"
+                    />
+                    <label for="environmentStar5" title="text">5 stars</label>
+                    <input
+                      type="radio"
+                      id="environmentStar4"
+                      name="environment"
+                      value="4"
+                    />
+                    <label for="environmentStar4" title="text">4 stars</label>
+                    <input
+                      type="radio"
+                      id="environmentStar3"
+                      name="environment"
+                      value="3"
+                    />
+                    <label for="environmentStar3" title="text">3 stars</label>
+                    <input
+                      type="radio"
+                      id="environmentStar2"
+                      name="environment"
+                      value="2"
+                    />
+                    <label for="environmentStar2" title="text">2 stars</label>
+                    <input
+                      type="radio"
+                      id="environmentStar1"
+                      name="environment"
+                      value="1"
+                    />
+                    <label for="environmentStar1" title="text">1 star</label>
+                  </div>
+                </div>
+
+                <div class="rating-category transport-mid" class="">
+                  <label class="rate-title" for="transportationRating"
+                    >Transportation:</label
+                  >
+                  <div class="rate" id="transportationRating">
+                    <input
+                      type="radio"
+                      id="transportationStar5"
+                      name="transportation"
+                      value="5"
+                    />
+                    <label for="transportationStar5" title="text"
+                      >5 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="transportationStar4"
+                      name="transportation"
+                      value="4"
+                    />
+                    <label for="transportationStar4" title="text"
+                      >4 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="transportationStar3"
+                      name="transportation"
+                      value="3"
+                    />
+                    <label for="transportationStar3" title="text"
+                      >3 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="transportationStar2"
+                      name="transportation"
+                      value="2"
+                    />
+                    <label for="transportationStar2" title="text"
+                      >2 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="transportationStar1"
+                      name="transportation"
+                      value="1"
+                    />
+                    <label for="transportationStar1" title="text">1 star</label>
+                  </div>
+                </div>
+
+                <div class="rating-category">
+                  <label class="rate-title" for="placeOfInterestRating"
+                    >Place of Interest:</label
+                  >
+                  <div class="rate" id="placeOfInterestRating">
+                    <input
+                      type="radio"
+                      id="placeOfInterestStar5"
+                      name="placeOfInterest"
+                      value="5"
+                    />
+                    <label for="placeOfInterestStar5" title="text"
+                      >5 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="placeOfInterestStar4"
+                      name="placeOfInterest"
+                      value="4"
+                    />
+                    <label for="placeOfInterestStar4" title="text"
+                      >4 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="placeOfInterestStar3"
+                      name="placeOfInterest"
+                      value="3"
+                    />
+                    <label for="placeOfInterestStar3" title="text"
+                      >3 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="placeOfInterestStar2"
+                      name="placeOfInterest"
+                      value="2"
+                    />
+                    <label for="placeOfInterestStar2" title="text"
+                      >2 stars</label
+                    >
+                    <input
+                      type="radio"
+                      id="placeOfInterestStar1"
+                      name="placeOfInterest"
+                      value="1"
+                    />
+                    <label for="placeOfInterestStar1" title="text"
+                      >1 star</label
+                    >
+                  </div>
+                </div>
+
+                <!-- Submit button -->
+                <div class="rate-submit text-center">
+                  <input
+                    type="submit"
+                    class="btn btn-primary mt-2"
+                    value="Rate"
+                  />
+                </div>
+              </form>
+            </div>
+            <!-- rating end -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      // js para sa modal rating
+      function openRatingModal() {
+        $("#ratingModal").modal("show");
+      }
+
+      document.querySelectorAll(".form-range").forEach(function (input) {
+        input.addEventListener("input", function () {
+          const selectedLabel = document.getElementById(
+            `selected-${this.name}`
+          );
+          selectedLabel.textContent = this.value;
+        });
+      });
+    </script>
+    <script>
+      // JavaScript function to trigger the print
+      function printTerms() {
+        window.print();
+      }
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

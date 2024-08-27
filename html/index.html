@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="../css2/style.css" />
+    <script
+      src="https://kit.fontawesome.com/470d815d8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="homepage">
+      <div id="homeLand">
+        <div class="background-container" id="backgroundContainer"></div>
+        <label id="logomid"><img src="../pics/3.png" /></label>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <label class="logo"><img src="../pics/flatos.png" /></label>
+          <ul>
+            <li><a class="active" href="#recommended">Rent</a></li>
+            <li><a href="#">Manage</a></li>
+            <li><a href="#footer">About Us</a></li>
+            <li><a class="mid" href="#">List your Property</a></li>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Sign up</a></li>
+          </ul>
+        </nav>
+        <label class="search-text" id="searchText">
+          LOCATION, COMMUNITY, QUALITY LIVING. IT STARTS HERE!
+        </label>
+      </div>
+      <!-- Modal -->
+      <form id="myForm">
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Filter Options</h4>
+              </div>
+
+              <!-- Modal Body -->
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="propertyType" class="form-label"
+                    >Property Type</label
+                  >
+                  <select
+                    class="form-select"
+                    id="propertyType"
+                    name="propertyType"
+                  >
+                    <option value="any">Any</option>
+                    <option value="studio">Studio Type</option>
+                    <option value="othertypes1">Other Type 1</option>
+                    <option value="othertypes2">Other Type 2</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="location" class="form-label">Location:</label>
+                  <select
+                    class="form-select"
+                    id="location"
+                    aria-label="Location"
+                    name="location"
+                  >
+                    <option value="any">Any</option>
+                    <option value="Carmona">Carmona</option>
+                    <option value="Binan">Binan</option>
+                    <option value="sta.rosa">Sta. Rosa</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="price" class="form-label">Price Range:</label>
+                  <input
+                    type="range"
+                    class="form-range"
+                    id="price"
+                    min="500"
+                    max="6500"
+                    step="500"
+                    value="500"
+                    name="price"
+                    aria-label="Price Range"
+                    oninput="updatePriceLabel(this.value)"
+                  />
+                  <div class="price-labels">
+                    <span>&#8369;1000</span>
+                    <span>&#8369;2000</span>
+                    <span>&#8369;3000</span>
+                    <span>&#8369;4000</span>
+                    <span>&#8369;5000</span>
+                    <span>&#8369;6000+</span>
+                  </div>
+                  <div id="selected-price">&#8369;500</div>
+                </div>
+                <div class="mb-3">
+                  <label for="bedrooms" class="form-label">Bedrooms:</label>
+                  <select
+                    class="form-select"
+                    id="bedrooms"
+                    aria-label="Bedrooms"
+                    name="bedrooms"
+                  >
+                    <option value="any">Any</option>
+                    <option value="Two">Two</option>
+                    <option value="Three">Three</option>
+                    <option value="Four">Four</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Modal Footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="searchButton" id="searchContainer">
+          <button
+            type="button"
+            id="buttonMdl"
+            class="btn btn-primary button-mdl"
+            data-bs-toggle="modal"
+            data-bs-target="#filterModal"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            <i class="fa-solid fa-house-chimney"></i>
+            <i class="fa-solid fa-grip"></i>
+          </button>
+          <input
+            class="search-place"
+            type="text"
+            name="search"
+            placeholder="Search"
+          />
+          <input
+            class="search-btn btn btn-primary"
+            type="submit"
+            class="btn btn-primary"
+            value="Submit"
+          />
+        </div>
+      </form>
+    </section>
+
+    <section id="recommended">
+      <label class="reco-text"> Recommended </label>
+      <div class="row row-cols-1 row-cols-md-3 g-1 pic-box">
+        <div class="col">
+          <div class="card h-100 custom-card">
+            <a href="#">
+              <img src="../pics/apartment.jpg" class="card-img-top" alt="..." />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">House for Rent</h5>
+              <p class="card-text room-text">
+                STUDIO TYPE HOUSE FOR RENT - NEAR TECHNOPARK
+              </p>
+              <p class="card-text room-loc">
+                <i class="fa-solid fa-location-dot"></i>BRGY. LOMA, BIÑAN,
+                LAGUNA
+              </p>
+            </div>
+            <div class="card-footer foot-text">
+              <small class="text-body-secondary"
+                >PROPERTY TYPE:<strong> STUDIO</strong></small
+              ><br />
+              <small class="text-body-secondary"
+                >FLOOR AREA:<strong> 11B</strong></small
+              ><br />
+              <small class="text-body-secondary"
+                ><strong>CONFIDENTIAL</strong></small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 custom-card">
+            <a href="#">
+              <img src="../pics/apartment.jpg" class="card-img-top" alt="..." />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">House for Rent</h5>
+              <p class="card-text room-text">
+                3 BEDROOM SINGLE ATTACHED PINEAPPLE HOUSE
+              </p>
+              <p class="card-text room-loc">
+                <i class="fa-solid fa-location-dot"></i>BIKINI BOTTOM
+              </p>
+            </div>
+            <div class="card-footer foot-text">
+              <small class="text-body-secondary"
+                >PROPERTY TYPE:<strong> UP AND DOWN</strong></small
+              ><br />
+              <small class="text-body-secondary"
+                >FLOOR AREA:<strong> 53M</strong></small
+              ><br />
+              <small class="text-body-secondary"
+                ><strong>5,800/MONTHLY</strong></small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 custom-card">
+            <a href="#">
+              <img src="../pics/apartment.jpg" class="card-img-top" alt="..." />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Room for Rent</h5>
+              <p class="card-text room-text">
+                GHOSTS FROM THE AMERICAN HORROR STORY
+              </p>
+              <p class="card-text room-loc">
+                <i class="fa-solid fa-location-dot"></i>BRGY. LOMA, BIÑAN,
+                LAGUNA
+              </p>
+            </div>
+            <div class="card-footer foot-text">
+              <small class="text-body-secondary"
+                >PROPERTY TYPE:<strong> APARTMENT</strong></small
+              ><br />
+              <small class="text-body-secondary"
+                >FLOOR AREA:<strong> 100M</strong></small
+              ><br />
+              <small class="text-body-secondary"
+                ><strong>1,500/MONTHLY</strong></small
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer" class="py-5">
+      <footer class="py-3 foot">
+        <div class="container">
+          <div class="logo-container">
+            <img src="../pics/fulllogo.png" class="footer-logo" />
+          </div>
+          <h1 class="foot-main">About Us</h1>
+          <div class="text-foot">
+            <a href="#">Privacy Policy</a><br />
+            <a href="#">Terms & Conditions </a><br />
+            <a href="#">Development</a>
+          </div>
+          <p>
+            We at FLAT-OS are committed to giving you the best experience.
+            <br />For any questions, comments, or issues, kindly contact us.
+          </p>
+          <h1 class="foot-main2 mb-4">
+            Connect with FLAT:
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>&nbsp;
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+          </h1>
+          <p class="foot-copyright">
+            Copyright &copy; 2023-2024 by FLAT-OS. All right reserved.
+          </p>
+        </div>
+      </footer>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var check = document.getElementById("check");
+        var homeLand = document.getElementById("searchContainer");
+        var filterButton = document.getElementById("buttonMdl");
+        var searchText = document.getElementById("searchText");
+        var backgroundContainer = document.getElementById(
+          "backgroundContainer"
+        );
+        var navLinks = document.querySelectorAll("nav ul li a");
+
+        check.addEventListener("change", function () {
+          var isVisible = !check.checked;
+
+          searchContainer.style.display = isVisible ? "block" : "none";
+          logomid.style.display = isVisible ? "block" : "none";
+          filterButton.style.display = isVisible ? "block" : "none";
+          searchText.style.display = isVisible ? "block" : "none";
+          backgroundContainer.style.display = isVisible ? "block" : "none";
+
+          navLinks.forEach(function (link) {
+            link.addEventListener("click", function () {
+              check.checked = false;
+            });
+          });
+        });
+      });
+    </script>
+    <script>
+      function updatePriceLabel(value) {
+        const priceLabel = document.getElementById("selected-price");
+        priceLabel.textContent = `Selected Price: ${value}`;
+      }
+    </script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

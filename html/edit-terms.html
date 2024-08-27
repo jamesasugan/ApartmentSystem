@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Account Settings</title>
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="../css2/edit-terms.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/470d815d8e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="py-5 my-5">
+      <div class="container">
+        <img class="logo mb-5" src="../pics/flatos.png" />
+        <div class="form-box">
+          <form method="get" action="#">
+            <div class="terms-and-conditions">
+              <div class="terms-content">
+                <div class="terms-mid">
+                  <h3 class="mb-4 tab-titles">Edit terms and conditions</h3>
+                  <h1>Rental Agreement Form</h1>
+                  <p>
+                    This agreement is made as of this by and between: <br />
+                    <span class="owner-name">
+                      <input
+                        type="text"
+                        id="ownerNameInput"
+                        name="ownerName"
+                        value=""
+                        placeholder="Your full name"
+                      />
+                    </span>
+                    and
+                    <span class="tenant-name">
+                      <input
+                        type="text"
+                        id="tenantNameInput"
+                        name="tenantName"
+                        value=""
+                        placeholder="Tenant's full name"
+                      />
+                    </span>
+                  </p>
+                </div>
+                <p class="terms-content">
+                  Starting
+                  <span class="date">
+                    <input type="date" id="dateInput" name="date" value="" />
+                  </span>
+                  at
+                  <span class="address">
+                    <input
+                      type="text"
+                      id="addressInput"
+                      name="address"
+                      value=""
+                      placeholder="Full Address"
+                    /> </span
+                  >Both the tenant and the owner will be bound by a contract
+                  that is based on the terms and conditions stated in the rental
+                  agreement form and is expected to be followed by both parties.
+                </p>
+                <div class="terms-bt">
+                  <h4>LEASE/RENTAL RATE</h4>
+                  <p>
+                    The Monthly rental rate for the leased premises shall be in
+                    <span class="price">
+                      <input
+                        type="text"
+                        id="priceInput"
+                        name="price"
+                        value=""
+                        placeholder="Price"
+                      />
+                    </span>
+                    and the tenant must pay the landlord before or on the
+                    <span class="deadline-date">
+                      <input
+                        type="text"
+                        id="deadlineDateInput"
+                        name="deadlineDate"
+                        value=""
+                        placeholder="ex: 1st, 2nd, 21st, 23rd"
+                      />
+                    </span>
+                    of every month.
+                  </p>
+                  <p>
+                    Once the tenant will fail to do so and done it several
+                    times, the owner would give a consideration notice if the
+                    tenant were still able to settle everything. It is the right
+                    of the owner what to do if they would not be able to follow
+                    the things that they agreed upon both in this agreement and
+                    what they have talked about personally. The owner, on the
+                    other side, must take responsibility.
+                  </p>
+                  <div class="other-sec mt-5">
+                    <h4>OTHERS</h4>
+                    <textarea
+                      id="othersInput"
+                      name="others"
+                      rows="4"
+                      placeholder="Enter additional information here..."
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="update text-center">
+                <input
+                  type="submit"
+                  name="submit"
+                  class="btn btn-primary"
+                  value="Submit"
+                />
+                <a href="ownerprofile.html" class="btn btn-light">Cancel</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Norwester";
+  src: url(../fonts/norwester/norwester.otf);
+}
+body {
+  background: url(../pics/background2.png);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box {
+  font-family: "montserrat", sans-serif;
+  width: 100%;
+  height: 80vh;
+  padding: 40px 50px 40px 50px;
+  background-color: rgba(255, 255, 255, 0.758);
+}
+input::placeholder {
+  font-style: italic;
+}
+.form-box label {
+  font-weight: bold;
+}
+.update {
+  margin-top: 30px;
+  font-family: "Norwester", sans-serif;
+  transition: 0.15s;
+}
+.update a {
+  margin-left: 20px;
+  background-color: #a3a2a2;
+  color: white;
+  transition: 0.15s;
+  font-size: 25px;
+  border: none;
+}
+.update input[type="submit"] {
+  font-size: 25px;
+  transition: 0.15s;
+  background-color: #011054;
+  border: none;
+}
+.update input[type="submit"]:hover {
+  background-color: #061e8b;
+}
+.update a:hover {
+  color: white;
+  background-color: #7c7c7c;
+}
+.tab-titles {
+  font-size: 40px;
+  font-family: "Norwester", sans-serif;
+}
+.logo {
+  width: 250px;
+  position: absolute;
+  top: 27%;
+  left: 75%;
+  transform: translate(20%, -105%);
+}
+@media only screen and (max-width: 576px) {
+  .form-box {
+    height: 120vh;
+  }
+  .logo {
+    top: 22%;
+    left: 5%;
+  }
+}

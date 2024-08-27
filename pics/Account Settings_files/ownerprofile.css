@@ -1,0 +1,363 @@
+@font-face {
+  font-family: "Norwester";
+  src: url(../fonts/norwester/norwester.otf);
+}
+body {
+  background: url(../pics/background2.png);
+  background-size: cover;
+}
+/* account settings */
+.update {
+  font-family: "Norwester", sans-serif;
+  transition: 0.15s;
+}
+.update a {
+  margin-left: 7px;
+  background-color: #a3a2a2;
+  color: white;
+  transition: 0.15s;
+  font-size: 20px;
+}
+.update input[type="submit"] {
+  font-size: 20px;
+  transition: 0.15s;
+}
+.update a:hover {
+  color: white;
+  background-color: #7c7c7c;
+}
+.log-out {
+  font-family: "Norwester", sans-serif;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.log-out a {
+  font-size: 20px;
+}
+.container {
+  margin-top: 3vw;
+}
+.side-profile {
+  background-color: #011054;
+}
+.side-profile h4 {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+}
+.user-icon {
+  color: white;
+  font-size: 45px;
+  margin-left: 83px;
+}
+.logo {
+  width: 250px;
+  position: absolute;
+  top: 33%;
+  left: 75%;
+  transform: translate(20%, -105%);
+}
+.shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+.profile-tab-nav {
+  min-width: 250px;
+}
+#v-pills-tab .nav-link.active,
+#v-pills-tab .show > .nav-link {
+  color: #011054;
+  background-color: white;
+}
+.history-module {
+  margin: 20px;
+  font-family: "montserrat", sans-serif;
+}
+.account-content {
+  background-color: #dbdbdb;
+  padding: 20px 30px 20px 30px;
+}
+.soa-text {
+  font-family: "montserrat", sans-serif;
+}
+.history-head {
+  background-color: #011054;
+}
+.history-body {
+  background-color: #dbdbdb;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+}
+#v-pills-tabContent {
+  height: 70vh;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.nav-pills a.nav-link {
+  font-family: "Norwester", sans-serif;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  color: white;
+}
+.tab-titles {
+  font-size: 40px;
+  font-family: "Norwester", sans-serif;
+}
+/* terms and condition */
+.terms-content {
+  background-color: #dbdbdb;
+  padding: 15px 30px 15px 30px;
+  width: 100%;
+  height: auto;
+  font-family: "montserrat";
+}
+.terms-content span {
+  font-weight: bold;
+}
+.terms-mid {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.terms-mid h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.terms-bt h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.terms-button button {
+  background-color: #011054;
+  border: none;
+  transition: 0.15s;
+}
+.form-check input[type="checkbox"] {
+  background-color: #7f919d;
+  color: #fff;
+  width: 1.3em;
+  height: 1.3em;
+}
+.print-check {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.print-check p {
+  text-decoration: underline;
+}
+.print-btn {
+  background-color: #011054;
+  color: white;
+  font-family: "montserrat";
+  width: 80px;
+  border: none;
+  transition: 0.15s;
+}
+.print-btn:hover {
+  background-color: #0b5ed7;
+}
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .terms-content,
+  .terms-content * {
+    visibility: visible;
+  }
+
+  .terms-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+/* file a complaint */
+.file-content {
+  background-color: #dbdbdb;
+  padding: 20px 30px 0 30px;
+}
+.file-content h2 {
+  font-family: "Norwester", sans-serif;
+}
+.file-button {
+  font-family: "Norwester", sans-serif;
+  padding: 5px 8px 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-button input[type="submit"] {
+  background-color: #011054;
+  border: none;
+  border-radius: 0;
+  font-size: 28px;
+  transition: 0.15s;
+}
+.file-button input[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+.form-group label {
+  margin-top: 5px;
+  font-family: "montserrat", sans-serif;
+  font-size: 18px;
+}
+
+/* rating */
+* {
+  margin: 0;
+  padding: 0;
+}
+.rate {
+  height: 46px;
+  padding: 0 10px;
+  margin-left: 10px;
+}
+.rate:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 50px;
+  color: #ffffff;
+  transition: 0.15s;
+}
+.rate:not(:checked) > label:before {
+  content: "★ ";
+}
+.rate > input:checked ~ label {
+  color: #ffc700;
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+.rate-title {
+  font-family: "montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 27px;
+  margin-left: 28px;
+}
+.rating-category {
+  display: inline-block;
+}
+.ratingform {
+  background-color: #dbdbdb;
+  padding: 20px 30px 0 30px;
+  padding-bottom: 3vw;
+}
+.transport-mid {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 2px;
+}
+.rate-submit input[type="submit"] {
+  background-color: #011054;
+  border: none;
+  border-radius: 0;
+  font-size: 28px;
+  transition: 0.15s;
+  font-family: "Norwester", sans-serif;
+  margin-right: 2.5vw;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.rate-submit input[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+
+@media only screen and (max-width: 576px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  th,
+  td {
+    min-width: 100px;
+  }
+  .logo {
+    top: 23%;
+    left: 5%;
+  }
+  .user-icon {
+    margin-left: 36vw;
+  }
+  .terms-mid h1 {
+    font-size: 23px;
+  }
+  .terms-bt h4 {
+    font-size: 19px;
+  }
+  .terms-content p {
+    font-size: 15px;
+  }
+  .file-button input[type="submit"] {
+    font-size: 23px;
+  }
+  .rate:not(:checked) > label {
+    font-size: 39px;
+    margin-left: 5px;
+  }
+  .rate-title {
+    font-size: 23px;
+    margin-left: 40px;
+  }
+  .transport-mid {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+  .ratingform {
+    padding-bottom: 8vw;
+  }
+}

@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Norwester";
+  src: url(../fonts/norwester/norwester.otf);
+}
+body {
+  background: url(../pics/background.png);
+  background-size: cover;
+}
+
+.side-profile {
+  background-color: #011054;
+  width: 300px;
+}
+.side-profile h4 {
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+}
+
+.user-icon {
+  color: white;
+  font-size: 45px;
+  margin-left: 83px;
+}
+.logo {
+  width: 250px;
+  position: absolute;
+  top: 40%;
+  left: 74.5%;
+  transform: translate(20%, -105%);
+}
+.shadow {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+.profile-tab-nav {
+  min-width: 250px;
+}
+#v-pills-tab .nav-link.active,
+#v-pills-tab .show > .nav-link {
+  color: #011054;
+  background-color: white;
+}
+.history-module {
+  margin: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+}
+#v-pills-tabContent {
+  height: 70vh;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.nav-pills a.nav-link {
+  font-family: "Norwester", sans-serif;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  color: white;
+}
+@media only screen and (max-width: 576px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  th,
+  td {
+    min-width: 100px;
+  }
+  .logo img {
+    top: 27.5%;
+    left: 50%;
+    transform: translate(20%, -105%);
+  }
+}

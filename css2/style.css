@@ -1,0 +1,397 @@
+@font-face {
+  font-family: "Norwester";
+  src: url(../fonts/norwester/norwester.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none !important;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: montserrat, sans-serif;
+}
+#homepage {
+  width: 100%;
+  height: 100vh;
+}
+nav {
+  display: flex;
+  align-items: center;
+  background: #011054;
+  height: 90px;
+  width: 100%;
+  font-family: "Norwester", sans-serif;
+}
+label.logo {
+  margin-left: 0.5vh;
+}
+label.logo img {
+  height: 220px;
+  width: auto;
+}
+nav ul {
+  margin-top: 1.5rem;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.mid {
+  margin-left: 5em;
+  margin-right: 5em;
+}
+#logomid {
+  position: absolute;
+  top: 14%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 2;
+}
+#logomid img {
+  width: 19rem;
+}
+.background-container {
+  background-color: rgba(255, 255, 255, 0.437);
+  width: 54%;
+  height: 11.5rem;
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button-mdl {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0;
+  background-color: #011054;
+  border-color: #011054;
+  transition: 0.15s;
+}
+.search-text {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+  font-family: "Bebas Neue", sans-serif;
+}
+.searchButton {
+  display: flex;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search-place {
+  padding: 10px;
+  width: 25vw;
+  border-radius: 0;
+  height: 4rem;
+}
+.search-btn {
+  background-color: #011054;
+  color: white;
+  font-family: "Norwester", sans-serif;
+  border-radius: 0;
+  font-size: 1.5rem;
+  border: none;
+  width: 8rem;
+  transition: 0.15s;
+}
+nav ul li a {
+  color: white;
+  font-size: 2vw;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+nav ul li a:hover {
+  background: white;
+  color: #011054;
+  transition: 0.5s;
+}
+.form-range {
+  width: 100%; /* Make the range input full-width */
+}
+
+.price-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.price-labels span {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+#recommended {
+  width: 100%;
+  height: 100vh;
+  background: url(../pics/footer.png) no-repeat;
+  background-size: cover;
+}
+.reco-text {
+  font-family: "Norwester", sans-serif;
+  color: white;
+  margin-left: 3rem;
+  font-size: 5rem;
+}
+.custom-card {
+  max-width: 440px;
+  margin: auto;
+}
+.card-title {
+  font-style: italic;
+  font-size: 1.5rem;
+}
+.room-loc {
+  font-style: italic;
+}
+.foot-text {
+  font-size: 19px;
+}
+.room-text {
+  font-family: "Norwester", sans-serif;
+  font-size: 22px;
+}
+.custom-card .card-img-top {
+  max-height: 270px;
+}
+.card-img-top {
+  transition: transform 0.3s ease-in-out;
+}
+.card-img-top:hover {
+  transform: scale(1.01);
+}
+
+.pic-box {
+  background-color: rgba(255, 255, 255, 0.305);
+  padding: 20px 0 20px 0;
+}
+
+#footer {
+  width: 100%;
+  height: 100vh;
+  background: url(../pics/footer.png) no-repeat;
+  background-size: cover;
+}
+.foot {
+  width: 100%;
+  height: 75%;
+  position: relative;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.24);
+  color: white;
+}
+.foot-main {
+  font-family: "Norwester", sans-serif;
+  margin-top: 2.3rem;
+  font-size: 2.8rem;
+}
+.foot-main2 {
+  font-family: "Norwester", sans-serif;
+  margin-top: 2.3rem;
+  font-size: 2.8rem;
+}
+.foot-main2 i {
+  color: white;
+  font-size: 3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.foot-main2 a:hover i {
+  transform: scale(1.2);
+  color: #1877f2;
+}
+.footer-logo {
+  position: absolute;
+  top: 50%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  width: 26rem;
+}
+.text-foot {
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+.text-foot a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.foot p {
+  font-size: 1.1rem;
+}
+.text-foot a:hover {
+  color: #0082e6;
+  text-decoration: underline;
+}
+@media (max-width: 952px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px) {
+  .background-container {
+    width: 84%;
+    height: 11.5rem;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .searchButton {
+    top: 58%;
+  }
+  .search-text {
+    font-size: 4vw;
+    top: 48%;
+  }
+  .button-mdl {
+    width: 13vw;
+    height: 11.5vw;
+  }
+  .button-mdl i {
+    font-size: 0.7rem;
+  }
+  .search-place {
+    width: 40vw;
+    height: 11.5vw;
+  }
+  .search-btn {
+    font-size: 0.8rem;
+    width: 13vw;
+    height: 11.5vw;
+  }
+  .checkbtn {
+    display: block;
+    margin-top: 10px;
+    margin-left: 35px;
+  }
+  nav ul {
+    margin-top: 0rem;
+  }
+  .new-item {
+    margin-left: 0rem;
+  }
+  .mid {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  ul {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background: #2c3e50;
+    top: 90px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a:hover {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  #recommended {
+    height: 123vh;
+  }
+  .custom-card {
+    width: 78vw; /* Adjust the max-width for smaller screens */
+  }
+  .custom-card .card-img-top {
+    height: 35vw;
+  }
+  .reco-text {
+    margin-left: 1rem;
+    font-size: 3rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .room-loc {
+    font-style: italic;
+  }
+  .foot-text {
+    font-size: 3vw;
+  }
+  .room-text {
+    font-size: 3.5vw;
+    margin-bottom: 0;
+  }
+  .card-text:last-child {
+    font-size: 2.6vw;
+  }
+  #footer {
+    height: 80vh;
+  }
+  .foot-main {
+    font-size: 10vw;
+  }
+  .foot-main2 {
+    font-size: 5vw;
+  }
+  .foot-main2 i {
+    font-size: 5vw;
+  }
+  .footer-logo {
+    position: absolute;
+    top: 20%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+  }
+  .text-foot {
+    font-size: 4.5vw;
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .foot p {
+    font-size: 3vw;
+  }
+  .foot-copyright {
+    margin-top: 20vw;
+  }
+}
+section {
+  background: url(../pics/main.png) no-repeat;
+  background-size: cover;
+  height: calc(100vh - 80px);
+}
